@@ -24,35 +24,35 @@ class fpdi_pdf_parser extends pdf_parser {
      * Pages
      * Index beginns at 0
      *
-     * @var array
+     * @public array
      */
-    var $pages;
+    public $pages;
     
     /**
      * Page count
-     * @var integer
+     * @public integer
      */
-    var $page_count;
+    public $page_count;
     
     /**
      * actual page number
-     * @var integer
+     * @public integer
      */
-    var $pageno;
+    public $pageno;
     
     
     /**
      * FPDI Reference
-     * @var object
+     * @public object
      */
-    var $fpdi;
+    public $fpdi;
     
     /**
      * Available BoxTypes
      *
-     * @var array
+     * @public array
      */
-    var $availableBoxes = array("/MediaBox","/CropBox","/BleedBox","/TrimBox","/ArtBox");
+    public $availableBoxes = array("/MediaBox","/CropBox","/BleedBox","/TrimBox","/ArtBox");
         
     /**
      * Constructor
@@ -60,7 +60,7 @@ class fpdi_pdf_parser extends pdf_parser {
      * @param string $filename  Source-Filename
      * @param object $fpdi      Object of type fpdi
      */
-    function fpdi_pdf_parser($filename,&$fpdi) {
+    function __construct($filename,&$fpdi) {
         $this->fpdi =& $fpdi;
 	  $this->filename = $filename;
 

@@ -19,16 +19,16 @@
 
 class pdf_context {
 
-	var $file;
-	var $buffer;
-	var $offset;
-	var $length;
+	public $file;
+	public $buffer;
+	public $offset;
+	public $length;
 
-	var $stack;
+	public $stack;
 
 	// Constructor
 
-	function pdf_context($f) {
+	function __construct($f) {
 		$this->file = $f;
 		$this->reset();
 	}

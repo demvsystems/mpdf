@@ -45,44 +45,44 @@ class pdf_parser {
 	
 	/**
      * Filename
-     * @var string
+     * @public string
      */
-    var $filename;
+    public $filename;
     
     /**
      * File resource
-     * @var resource
+     * @public resource
      */
-    var $f;
+    public $f;
     
     /**
      * PDF Context
-     * @var object pdf_context-Instance
+     * @public object pdf_context-Instance
      */
-    var $c;
+    public $c;
     
     /**
      * xref-Data
-     * @var array
+     * @public array
      */
-    var $xref;
+    public $xref;
 
     /**
      * root-Object
-     * @var array
+     * @public array
      */
-    var $root;
+    public $root;
 	
     // mPDF 4.0 Added flag to show success on loading file
-    var $success;
-    var $errormsg;
+    public $success;
+    public $errormsg;
 
     /**
      * Constructor
      *
      * @param string $filename  Source-Filename
      */
-	function pdf_parser($filename) {
+	function __construct($filename) {
         $this->filename = $filename;
 	  // mPDF 4.0
 	  $this->success = true;
